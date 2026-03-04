@@ -18,8 +18,8 @@
   --card: #0f1923;
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.7; overflow-x: hidden; }
+html { scroll-behavior: smooth; width: 100%; overflow-x: hidden; }
+body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.7; overflow-x: hidden; width: 100%; max-width: 100vw; }
 
 /* CURSOR */
 #cursor-dot {
@@ -59,7 +59,7 @@ nav {
 .nav-links a:hover { color: var(--accent); }
 
 /* HERO */
-#hero { position: relative; min-height: 100vh; display: flex; align-items: center; padding: 0 60px; overflow: hidden; z-index: 1; }
+#hero { position: relative; min-height: 100vh; width: 100%; display: flex; align-items: center; padding: 0 60px; overflow: hidden; z-index: 1; }
 .hero-glow { position: absolute; width: 700px; height: 700px; background: radial-gradient(circle, rgba(0,212,255,0.1) 0%, transparent 70%); top: 50%; left: 55%; transform: translate(-50%,-50%); pointer-events: none; animation: pulseGlow 5s ease-in-out infinite; }
 .hero-glow2 { position: absolute; width: 400px; height: 400px; background: radial-gradient(circle, rgba(124,58,237,0.08) 0%, transparent 70%); top: 20%; left: 5%; pointer-events: none; animation: pulseGlow 7s ease-in-out infinite reverse; }
 @keyframes pulseGlow { 0%,100%{opacity:0.8;transform:translate(-50%,-50%) scale(1)} 50%{opacity:1;transform:translate(-50%,-50%) scale(1.1)} }
@@ -77,9 +77,9 @@ nav {
 @keyframes pingOut { 0%{transform:scale(1);opacity:1} 100%{transform:scale(2.5);opacity:0} }
 
 .hero-name {
-  font-family: 'Syne', sans-serif; font-size: clamp(38px, 5.5vw, 82px); font-weight: 800;
+  font-family: 'Syne', sans-serif; font-size: clamp(24px, 7.5vw, 82px); font-weight: 800;
   line-height: 1.05; letter-spacing: -2px; margin-bottom: 24px; animation: slideUp 0.6s 0.2s both;
-  overflow: visible;
+  word-break: normal; white-space: nowrap; width: 100%; overflow: visible;
 }
 .hero-name .line1 { background: linear-gradient(135deg, #fff 0%, var(--accent) 55%, var(--accent2) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: block; }
 .hero-name .line2 { color: #1e2d3d; display: block; }
@@ -158,7 +158,7 @@ section { position: relative; z-index: 1; padding: 100px 60px; }
 /* CONTACT */
 #contact { text-align: center; padding: 120px 60px; }
 .contact-glow { position: absolute; width: 500px; height: 300px; background: radial-gradient(ellipse, rgba(0,212,255,0.07) 0%, transparent 70%); left: 50%; top: 50%; transform: translate(-50%,-50%); pointer-events: none; }
-.contact-email { font-family: 'Syne', sans-serif; font-size: clamp(26px,4vw,46px); font-weight: 800; letter-spacing: -1px; color: var(--text); text-decoration: none; display: block; margin-bottom: 44px; transition: color 0.2s; }
+.contact-email { font-family: 'Syne', sans-serif; font-size: clamp(14px, 4vw, 46px); font-weight: 800; letter-spacing: -1px; color: var(--text); text-decoration: none; display: block; margin-bottom: 44px; transition: color 0.2s; white-space: nowrap; width: 100%; text-align: center; }
 .contact-email:hover { color: var(--accent); }
 .contact-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
 .contact-link { display: flex; align-items: center; gap: 8px; color: var(--muted); text-decoration: none; font-size: 13px; transition: all 0.2s; border: 1px solid var(--border); padding: 11px 22px; border-radius: 2px; }
@@ -187,16 +187,74 @@ footer span { font-size: 12px; color: var(--muted); font-family: 'JetBrains Mono
 .delay-7 { animation-delay: 0.59s; }
 .delay-8 { animation-delay: 0.68s; }
 
+/* ── TABLET (max 900px) ── */
 @media(max-width:900px){
   nav { padding: 16px 24px; }
   .nav-links { display: none; }
   section { padding: 70px 24px; }
-  #hero { padding: 0 24px; }
-  .hero-stats { gap: 24px; }
-  .exp-grid,.apps-grid,.web-grid { grid-template-columns: 1fr; }
+  #hero { padding: 0 24px; min-height: 100svh; }
+  .hero-stats { gap: 28px; flex-wrap: wrap; }
+  .exp-grid { grid-template-columns: 1fr; }
+  .apps-grid { grid-template-columns: 1fr 1fr; }
+  .web-grid { grid-template-columns: 1fr; }
   .skills-grid { grid-template-columns: 1fr 1fr; }
   footer { padding: 20px 24px; flex-direction: column; gap: 10px; text-align: center; }
   .divider { margin: 0 24px; }
+  .scroll-hint { left: 24px; }
+  .contact-links { flex-direction: column; align-items: center; }
+}
+
+/* ── MOBILE (max 600px) ── */
+@media(max-width:600px){
+  nav { padding: 14px 20px; }
+
+  #hero {
+    padding: 100px 20px 60px;
+    min-height: 100svh;
+    width: 100%;
+    align-items: flex-start;
+  }
+  .hero-content { width: 100%; max-width: 100%; }
+  .hero-glow, .hero-glow2 { display: none; }
+  .hero-tag { font-size: 10px; padding: 5px 12px; margin-bottom: 20px; white-space: normal; }
+  .hero-name { font-size: clamp(24px, 7.5vw, 48px); letter-spacing: -0.5px; line-height: 1.1; margin-bottom: 16px; word-break: normal; white-space: nowrap; width: 100%; overflow: visible; }
+  .hero-role { font-size: 15px; margin-bottom: 28px; }
+  .hero-stats { gap: 20px; margin-bottom: 32px; flex-wrap: wrap; }
+  .stat-num { font-size: 32px; }
+  .stat-label { font-size: 10px; }
+  .hero-cta { flex-direction: column; gap: 12px; width: 100%; }
+  .btn-primary, .btn-ghost { width: 100%; justify-content: center; padding: 13px 20px; font-size: 14px; }
+  .scroll-hint { display: none; }
+
+  section { padding: 60px 20px; width: 100%; }
+  .section-title { font-size: clamp(28px, 8vw, 42px); letter-spacing: -1px; margin-bottom: 36px; }
+
+  .exp-grid { grid-template-columns: 1fr; gap: 14px; }
+  .exp-card { padding: 22px; }
+  .exp-title { font-size: 17px; }
+
+  .apps-grid { grid-template-columns: 1fr; gap: 14px; }
+  .app-card { padding: 20px; }
+  .app-name { font-size: 15px; }
+
+  .web-grid { grid-template-columns: 1fr; gap: 14px; }
+  .web-card { padding: 20px; }
+  .web-num { font-size: 32px; }
+  .web-name { font-size: 16px; }
+
+  .skills-grid { grid-template-columns: 1fr; gap: 14px; }
+  .skill-group { padding: 20px; }
+
+  #contact { padding: 80px 20px; }
+  .contact-email { margin-bottom: 28px; }
+  .contact-links { flex-direction: column; align-items: stretch; gap: 10px; }
+  .contact-link { justify-content: center; padding: 12px 16px; }
+
+  .divider { margin: 0 20px; }
+  footer { padding: 20px; flex-direction: column; gap: 8px; text-align: center; }
+  footer span { font-size: 11px; }
+
+  #cursor-dot, #cursor-ring { display: none; }
 }
 </style>
 </head>
@@ -209,7 +267,7 @@ footer span { font-size: 12px; color: var(--muted); font-family: 'JetBrains Mono
 
 <!-- NAV -->
 <nav>
-  <a class="nav-logo" href="#hero">BSR</a>
+  <a class="nav-logo" href="#hero">SRB</a>
   <div class="nav-links">
     <a href="#experience">Experience</a>
     <a href="#apps">Apps</a>
@@ -217,7 +275,15 @@ footer span { font-size: 12px; color: var(--muted); font-family: 'JetBrains Mono
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
   </div>
+  <button id="hamburger" onclick="toggleMenu()" style="display:none;background:none;border:1px solid var(--border);color:var(--text);padding:8px 12px;border-radius:2px;font-size:18px;cursor:pointer;">☰</button>
 </nav>
+<div id="mobile-menu" style="display:none;position:fixed;top:60px;left:0;right:0;background:rgba(6,9,16,0.98);backdrop-filter:blur(12px);z-index:999;padding:20px;border-bottom:1px solid var(--border);">
+  <a href="#experience" onclick="closeMenu()" style="display:block;padding:12px 0;color:var(--muted);text-decoration:none;font-size:13px;letter-spacing:2px;text-transform:uppercase;border-bottom:1px solid var(--border)">Experience</a>
+  <a href="#apps" onclick="closeMenu()" style="display:block;padding:12px 0;color:var(--muted);text-decoration:none;font-size:13px;letter-spacing:2px;text-transform:uppercase;border-bottom:1px solid var(--border)">Apps</a>
+  <a href="#web" onclick="closeMenu()" style="display:block;padding:12px 0;color:var(--muted);text-decoration:none;font-size:13px;letter-spacing:2px;text-transform:uppercase;border-bottom:1px solid var(--border)">Web</a>
+  <a href="#skills" onclick="closeMenu()" style="display:block;padding:12px 0;color:var(--muted);text-decoration:none;font-size:13px;letter-spacing:2px;text-transform:uppercase;border-bottom:1px solid var(--border)">Skills</a>
+  <a href="#contact" onclick="closeMenu()" style="display:block;padding:12px 0;color:var(--accent);text-decoration:none;font-size:13px;letter-spacing:2px;text-transform:uppercase;">Contact</a>
+</div>
 
 <!-- HERO -->
 <section id="hero">
@@ -432,11 +498,33 @@ footer span { font-size: 12px; color: var(--muted); font-family: 'JetBrains Mono
 
 <footer>
   <span>© 2025 Balaganesan SR</span>
-  <span>Mobile & Full Stack Developer · India → Worldwide</span>
-  <span>Built with ♥ and lots of Code</span>
+  <span>Mobile & Full Stack Developer · Chennai → Worldwide</span>
+  <span>Built with Flutter ♥</span>
 </footer>
 
 <script>
+// ── HAMBURGER ────────────────────────────────────────────────────
+function toggleMenu() {
+  const m = document.getElementById('mobile-menu');
+  const h = document.getElementById('hamburger');
+  const open = m.style.display === 'block';
+  m.style.display = open ? 'none' : 'block';
+  h.textContent = open ? '☰' : '✕';
+}
+function closeMenu() {
+  document.getElementById('mobile-menu').style.display = 'none';
+  document.getElementById('hamburger').textContent = '☰';
+}
+// Show hamburger on mobile
+function checkNav() {
+  const h = document.getElementById('hamburger');
+  const nl = document.querySelector('.nav-links');
+  if (window.innerWidth <= 600) { h.style.display = 'block'; nl.style.display = 'none'; }
+  else { h.style.display = 'none'; nl.style.display = 'flex'; closeMenu(); }
+}
+checkNav();
+window.addEventListener('resize', checkNav);
+
 // ── EMAIL (split to bypass proxy obfuscation) ────────────────────
 const u = 'balaganesansr', d = 'gmail' + '.' + 'com';
 const email = u + '@' + d;
