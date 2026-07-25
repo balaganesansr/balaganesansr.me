@@ -348,7 +348,7 @@ export const SKILLS: SkillNode[] = [
   { id: "oauth", label: "OAuth / JWT", domain: "security", usedIn: ["Drug Dispenser panel", "App auth"] },
   { id: "fireauth", label: "Firebase Auth", domain: "security", usedIn: ["Play Store apps"] },
   { id: "rbac", label: "RBAC", domain: "security", usedIn: ["Admin dashboards"] },
-  { id: "claudecode", label: "Claude Code", domain: "ai", usedIn: ["Anthropic certified - daily workflow"] },
+  { id: "claudecode", label: "Claude Code", domain: "ai", usedIn: ["Daily workflow"] },
   { id: "opencode", label: "OpenCode", domain: "ai", usedIn: ["Daily workflow"] },
   { id: "cursor", label: "Cursor", domain: "ai", usedIn: ["Daily workflow"] },
   { id: "codex", label: "OpenAI Codex", domain: "ai", usedIn: ["Daily workflow"] },
