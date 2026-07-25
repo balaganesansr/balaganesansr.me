@@ -1,16 +1,10 @@
 ﻿"use client";
 
-import dynamic from "next/dynamic";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowUpRight, ArrowDown, Download } from "lucide-react";
 import { IDENTITY, STATS } from "@/constants/content";
 import { Counter } from "@/components/motion/Counter";
 import { Magnetic } from "@/components/motion/Magnetic";
-
-const ParticleField = dynamic(() => import("./ParticleField"), {
-  ssr: false,
-  loading: () => null,
-});
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -23,13 +17,6 @@ export function Hero() {
       className="relative z-[2] flex min-h-[100svh] items-center overflow-hidden px-6 md:px-14"
       aria-label="Introduction"
     >
-      {/* depth field */}
-      {!reduced && (
-        <div className="absolute inset-0 z-0 opacity-80" aria-hidden>
-          <ParticleField />
-        </div>
-      )}
-
       <div className="relative z-10 mx-auto w-full max-w-6xl pt-28 pb-20 md:pt-24">
         <motion.div
           className="font-mono mb-9 inline-flex items-center gap-3 border border-[rgba(var(--accent-rgb),0.25)] bg-[rgba(var(--accent-rgb),0.04)] px-4 py-2 text-[11px] tracking-[0.18em] text-[var(--accent)] uppercase"
