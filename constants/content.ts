@@ -1,4 +1,4 @@
-import type {
+﻿import type {
   JourneyChapter,
   PlayApp,
   SkillDomain,
@@ -17,10 +17,10 @@ export const IDENTITY = {
   name: "Balaganesan SR",
   firstName: "Balaganesan",
   lastName: "SR",
-  role: "IT & Technical Support · Software Developer",
+  role: "Mobile & Full Stack Developer",
   tagline:
-    "Diagnosing and fixing issues across live apps, servers, networks and hardware.",
-  availability: "Available immediately - open to relocation",
+    "Building production-grade apps from architecture to deployment, end-to-end.",
+  availability: "Available for opportunities worldwide",
   location: "Karaikudi, Tamil Nadu, India",
   email: "balaganesansr@gmail.com",
   phone: "+91 90257 88989",
@@ -30,18 +30,18 @@ export const IDENTITY = {
   site: "https://balaganesansr.me",
   resume: "/Balaganesan-SR-Resume.pdf",
   locationLine:
-    "Karaikudi, Tamil Nadu, India · IST (UTC+5:30) · Immediate availability · Open to relocation",
+    "Karaikudi, Tamil Nadu, India · IST (UTC+5:30) · Open to remote & relocation",
   about:
-    "I handle the full technical support side of every project I work on: Windows and Linux administration, cloud server management, user accounts for 55+ platform users, and day-to-day support for clients and interns. I also build production software end to end - 7 Android apps live on Google Play - so when something breaks, I can trace it from the user's screen down to the server and fix it.",
+    "I started shipping real products in my second year of engineering - every role here ran alongside or straight out of my degree. What I'm looking for next: a team with senior engineers to learn from, building products bigger than one person can ship alone.",
   biodataRequest:
     "mailto:balaganesansr@gmail.com?subject=Biodata%20request&body=Hi%20Balaganesan%2C%0A%0AWe%20reviewed%20your%20portfolio%20and%20would%20like%20your%20detailed%20biodata.%0A%0AThanks",
 };
 
 export const STATS: Stat[] = [
-  { value: 2, suffix: ".5", label: "Years Hands-on Experience" },
-  { value: 55, suffix: "+", label: "Platform Users Supported" },
-  { value: 7, suffix: "", label: "Live Apps Maintained" },
-  { value: 10, suffix: "+", label: "Client Projects Delivered" },
+  { value: 10, suffix: "+", label: "Live Products" },
+  { value: 7, suffix: "", label: "Play Store Releases" },
+  { value: 3, suffix: "", label: "B2B Clients" },
+  { value: 2, suffix: "+", label: "Years Building" },
 ];
 
 export const JOURNEY: JourneyChapter[] = [
@@ -65,18 +65,18 @@ export const JOURNEY: JourneyChapter[] = [
     id: "quix",
     period: "JAN 2024 - MAR 2025",
     year: "2024",
-    title: "Flutter Developer",
+    title: "Lead Flutter Developer",
     org: "Quix Graphix",
     location: "Remote",
     kind: "role",
     summary:
-      "Developed and delivered mobile applications and websites for agency clients - and owned the support side: client communication, issue resolution and ongoing updates on everything shipped.",
+      "Led client communications, technical scoping, and delivery of production Flutter and web applications. Built reusable UI component libraries and shipped multiple client-facing apps across e-commerce, wellness, and hospitality.",
     highlights: [
-      "Handled client communication, issue resolution and ongoing updates",
       "Built Fortune Digit - a numerology engine app (Pythagorean & Chaldean systems)",
       "Developed a sensor-driven Vastu compass app (gyroscope, accelerometer, magnetometer)",
+      "Delivered client websites and a reusable Flutter UI component library",
     ],
-    tags: ["Flutter", "Client Support", "Issue Resolution", "Firebase"],
+    tags: ["Flutter", "BLoC", "REST APIs", "Firebase", "Client Delivery"],
   },
   {
     id: "oneyes",
@@ -87,31 +87,29 @@ export const JOURNEY: JourneyChapter[] = [
     location: "Chennai",
     kind: "internship",
     summary:
-      "Taken alongside the Quix Graphix engagement, during the final year of my degree. Built MegaMart - a full-stack e-commerce platform with React and Django, featuring OTP-verified login, an admin panel, and real-time order tracking.",
+      "Taken alongside the Quix Graphix engagement, during the final year of my degree, to build full-stack depth beyond mobile. Built MegaMart - a full-stack e-commerce platform with React and Django, featuring Stripe payments, OTP email verification, an admin panel, and real-time order tracking.",
     highlights: [
-      "OTP-verified login with payments and order tracking",
+      "Stripe payments with OTP-verified login and order tracking",
       "Full admin dashboard for catalogue and order management",
     ],
-    tags: ["React.js", "Django", "PostgreSQL"],
+    tags: ["React.js", "Django", "Stripe", "PostgreSQL"],
   },
   {
     id: "zedindex",
     period: "MAR 2025 - PRESENT",
     year: "2025",
-    title: "Software Developer & IT Support",
+    title: "Software Developer & Trainer",
     org: "ZedIndex",
     location: "Karaikudi",
     kind: "role",
     summary:
-      "First-line technical support for interns, clients and end users, alongside software delivery. Windows and Linux administration, OS deployment including network (PXE) boot, live cloud servers on DigitalOcean and AWS Lightsail, office IT from printers to firewall rules, and 7 live Android apps maintained on Google Play.",
+      "Delivering B2B software solutions across education, wellness, and e-commerce. Published and maintain 7 Flutter apps on the Google Play Store - owning pipelines from architecture to live deployment - and training learners through course-based applications.",
     highlights: [
-      "First-line support for interns, clients and end users - accounts, access, installation and usage issues",
-      "OS installation and deployment on Windows & Linux, including network (PXE) boot",
-      "Live cloud VMs (DigitalOcean, AWS Lightsail) - deployment, DNS, SSL, monitoring",
-      "Office IT: printers, routers & Wi-Fi, LAN cabling, firewall rules, remote support (AnyDesk, TeamViewer)",
-      "User accounts, approvals and credentials for a 55+ user internship platform",
+      "7 Flutter apps published and maintained on Google Play Store",
+      "White-label course platform running in production for 3 separate clients",
+      "Training learners through course-based applications",
     ],
-    tags: ["IT Support", "Windows & Linux", "Networking", "Cloud VMs", "Play Store"],
+    tags: ["Flutter", "Play Store", "B2B", "CI/CD", "White-label", "Training"],
   },
   {
     id: "education",
@@ -125,7 +123,7 @@ export const JOURNEY: JourneyChapter[] = [
       "First Class, CGPA 7.73/10 - a CS foundation built alongside real-world product development throughout the degree. Final-year project work graded O (Outstanding, 10/10).",
     highlights: [
       "Coursework: AI & ML, Cryptography & Cyber Security, Cloud Services, Embedded Systems & IoT, Web Application Security",
-      "Certifications: DevOps Internship (ISAN), Python & C (Sololearn), AI for India 2.0 (GUVI), Claude Code in Action (Anthropic)",
+      "Guinness World Record participant - largest online programming lesson",
     ],
     tags: ["AI for India 2.0", "React Essentials", "Python Core"],
   },
@@ -256,17 +254,6 @@ export const APPS: PlayApp[] = [
 
 export const WEB_PROJECTS: WebProject[] = [
   {
-    id: "interns",
-    name: "ZedIndex Interns",
-    url: "https://interns.zedindex.com",
-    urlLabel: "interns.zedindex.com",
-    sector: "Internal Platform",
-    role: "Build, deploy & support",
-    built:
-      "Internship management platform (Laravel, MySQL) used by 55+ interns - accounts, approvals and credentials managed end to end.",
-    stack: ["Laravel", "MySQL", "User Management"],
-  },
-  {
     id: "balibkvilla",
     name: "Bali BK Villa",
     url: "https://balibkvilla.com",
@@ -299,6 +286,17 @@ export const WEB_PROJECTS: WebProject[] = [
     stack: ["Web", "Galleries", "CMS"],
   },
   {
+    id: "quixgraphix",
+    name: "Quix Graphix",
+    url: "https://quix.zedindex.com",
+    urlLabel: "quix.zedindex.com",
+    sector: "Agency",
+    role: "Design & build",
+    built:
+      "Company portfolio showcasing Flutter UI components and project case studies.",
+    stack: ["Web", "Component Showcase"],
+  },
+  {
     id: "padmavathy",
     name: "Padmavathy Crackers",
     url: "https://padmavathycrackers.com",
@@ -322,38 +320,39 @@ export const WEB_PROJECTS: WebProject[] = [
 ];
 
 export const SKILL_DOMAINS: SkillDomain[] = [
-  { id: "systems", label: "Systems & Hardware", ring: 1 },
-  { id: "network", label: "Networking", ring: 2 },
-  { id: "support", label: "User & Remote Support", ring: 3 },
-  { id: "cloud", label: "Servers & Cloud", ring: 4 },
-  { id: "dev", label: "Development & Automation", ring: 5 },
+  { id: "mobile", label: "Mobile", ring: 1 },
+  { id: "web", label: "Frontend & Backend", ring: 2 },
+  { id: "cloud", label: "Cloud & Data", ring: 3 },
+  { id: "security", label: "Payments & Security", ring: 4 },
+  { id: "ai", label: "AI-Assisted Development", ring: 5 },
 ];
 
 export const SKILLS: SkillNode[] = [
-  { id: "windows", label: "Windows 10/11", domain: "systems", usedIn: ["Installation, configuration & troubleshooting"] },
-  { id: "linux", label: "Ubuntu Linux Server", domain: "systems", usedIn: ["Live server administration at ZedIndex"] },
-  { id: "pxe", label: "OS Deployment / PXE Boot", domain: "systems", usedIn: ["Network-boot OS installs at ZedIndex"] },
-  { id: "pcbuild", label: "PC Building & Laptop Repair", domain: "systems", usedIn: ["RAM, SSD, motherboard & display replacement"] },
-  { id: "printers", label: "Printer Setup & Support", domain: "systems", usedIn: ["Office IT at ZedIndex"] },
-  { id: "iot", label: "ESP32 / IoT Devices", domain: "systems", usedIn: ["Device assembly & debugging"] },
-  { id: "tcpip", label: "TCP/IP Fundamentals", domain: "network", usedIn: ["Office & server networking"] },
-  { id: "wifi", label: "Router & Wi-Fi Setup", domain: "network", usedIn: ["Office IT at ZedIndex"] },
-  { id: "lan", label: "LAN Cabling", domain: "network", usedIn: ["Office network setup"] },
-  { id: "firewall", label: "Firewall Configuration", domain: "network", usedIn: ["Windows Firewall", "Linux & cloud firewalls"] },
-  { id: "dns", label: "DNS & SSL", domain: "network", usedIn: ["Live domains for client sites"] },
-  { id: "remote", label: "AnyDesk / TeamViewer", domain: "support", usedIn: ["Remote user support"] },
-  { id: "rdp", label: "RustDesk / RDP / Chrome Remote", domain: "support", usedIn: ["Remote troubleshooting"] },
-  { id: "accounts", label: "Account & Access Management", domain: "support", usedIn: ["55+ user internship platform"] },
-  { id: "office", label: "Microsoft Office Support", domain: "support", usedIn: ["End-user support"] },
-  { id: "docean", label: "DigitalOcean / AWS Lightsail", domain: "cloud", usedIn: ["Live cloud VMs - deploy, monitor, maintain"] },
+  { id: "flutter", label: "Flutter & Dart", domain: "mobile", usedIn: ["All 7 Play Store apps"] },
+  { id: "bloc", label: "BLoC / Cubit", domain: "mobile", usedIn: ["K Mart", "Tarabala", "Fortune Digit"] },
+  { id: "cleanarch", label: "Clean Architecture", domain: "mobile", usedIn: ["Brihaspati Gurukula", "Tarabala"] },
+  { id: "playstore", label: "Play Store Deployment", domain: "mobile", usedIn: ["All 7 published apps"] },
+  { id: "sensors", label: "Sensor APIs", domain: "mobile", usedIn: ["Vastu App"] },
+  { id: "react", label: "React.js", domain: "web", usedIn: ["MegaMart", "Quick Chat"] },
+  { id: "node", label: "Node.js", domain: "web", usedIn: ["Quick Chat"] },
+  { id: "django", label: "Django", domain: "web", usedIn: ["MegaMart"] },
+  { id: "rest", label: "REST APIs / WebSockets", domain: "web", usedIn: ["OTA Platform (Fizon)", "Quick Chat"] },
+  { id: "htmlcss", label: "HTML / CSS", domain: "web", usedIn: ["Client websites"] },
+  { id: "firebase", label: "Firebase", domain: "cloud", usedIn: ["K Mart", "Course platform apps"] },
+  { id: "awsgcp", label: "AWS / GCP", domain: "cloud", usedIn: ["Production deployments"] },
   { id: "docker", label: "Docker & CI/CD", domain: "cloud", usedIn: ["ISAN internship", "App release pipelines"] },
-  { id: "livesites", label: "Live Site Maintenance", domain: "cloud", usedIn: ["Client websites & web apps in production"] },
-  { id: "flutter", label: "Flutter & Dart", domain: "dev", usedIn: ["All 7 Play Store apps"] },
-  { id: "webstack", label: "React.js / Node.js", domain: "dev", usedIn: ["MegaMart", "Quick Chat"] },
-  { id: "backend", label: "Django / Laravel / MySQL", domain: "dev", usedIn: ["MegaMart", "interns.zedindex.com"] },
-  { id: "python", label: "Python & Windows Scripting", domain: "dev", usedIn: ["Automation & tooling"] },
-  { id: "git", label: "Git / GitHub", domain: "dev", usedIn: ["All projects"] },
-  { id: "aitools", label: "AI-Assisted Troubleshooting", domain: "dev", usedIn: ["Claude Code", "Cursor"] },
+  { id: "sql", label: "MySQL / PostgreSQL", domain: "cloud", usedIn: ["MegaMart"] },
+  { id: "mongo", label: "MongoDB", domain: "cloud", usedIn: ["Backend services"] },
+  { id: "stripe", label: "Stripe", domain: "security", usedIn: ["MegaMart"] },
+  { id: "razorpay", label: "Razorpay", domain: "security", usedIn: ["Payment integrations"] },
+  { id: "oauth", label: "OAuth / JWT", domain: "security", usedIn: ["Drug Dispenser panel", "App auth"] },
+  { id: "fireauth", label: "Firebase Auth", domain: "security", usedIn: ["Play Store apps"] },
+  { id: "rbac", label: "RBAC", domain: "security", usedIn: ["Admin dashboards"] },
+  { id: "claudecode", label: "Claude Code", domain: "ai", usedIn: ["Daily workflow"] },
+  { id: "opencode", label: "OpenCode", domain: "ai", usedIn: ["Daily workflow"] },
+  { id: "cursor", label: "Cursor", domain: "ai", usedIn: ["Daily workflow"] },
+  { id: "codex", label: "OpenAI Codex", domain: "ai", usedIn: ["Daily workflow"] },
+  { id: "localllm", label: "Local LLMs", domain: "ai", usedIn: ["LM Studio · Ollama · llama.cpp"] },
 ];
 
 export const NAV_LINKS = [
@@ -365,8 +364,8 @@ export const NAV_LINKS = [
 ];
 
 export const SITE_META = {
-  title: "Balaganesan SR - IT & Technical Support",
+  title: "Balaganesan SR - Mobile & Full Stack Developer",
   description:
-    "IT & technical support professional with 2.5 years of hands-on experience: Windows & Linux administration, networking, hardware troubleshooting, cloud servers and user support - plus 7 Android apps live on Google Play.",
+    "Mobile & Full Stack Developer building production-grade apps end-to-end. 7 Flutter apps live on Google Play, full-stack delivery with React, Node.js and Django.",
   url: "https://balaganesansr.me",
 };
