@@ -317,6 +317,17 @@ export const WEB_PROJECTS: WebProject[] = [
       "Real-time multi-user chat with online presence indicators, built with React.js, Node.js & WebSockets.",
     stack: ["React.js", "Node.js", "WebSockets"],
   },
+  {
+    id: "samriddhiglobal",
+    name: "Samriddhi Global",
+    url: "https://samriddhiglobal.in",
+    urlLabel: "samriddhiglobal.in",
+    sector: "HR & Staffing",
+    role: "Design & build",
+    built:
+      "Corporate website for a global HR and workforce solutions firm - talent acquisition, staffing, RPO and executive search, with enquiry capture for hiring requests.",
+    stack: ["Laravel", "Blade", "MySQL"],
+  },
 ];
 
 export const SKILL_DOMAINS: SkillDomain[] = [
